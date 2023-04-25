@@ -11,9 +11,6 @@ module.exports = {
       template: "src/index.html",
     }),
   ],
-  devServer: {
-    port: 3030,
-  },
   module: {
     rules: [
       {
