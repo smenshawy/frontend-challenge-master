@@ -1,4 +1,55 @@
+
+# The solution
+
+## Committing steps
+
+* Creating a new repo with the resources provided with the challenge.
+* Creating a React App  boilerplate that uses Babel for transpiling, Webpack for bundling, SCSS for styling, Jest and React Testing Library for testing.
+* Creating the Wdiget
+* Integrating the widget to the clinet's webpage.
+
+## To run the widget
+
+* Clone the repo locally.
+* Run `npm install` and `npm start` in the api project to start the backend.
+* Run `npm install` and `npm run build` in the financing-cost-widget project to bundle the app in `dist/bundle.js`.
+* Open the `product-page.html` page in the browser.
+
+## To distribute to clients
+
+* Add 3 <script> tags in the HTML page before the enty point of the project, main.js in this case:
+```
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="../financing-cost-widget/dist/bundle.js"></script>
+```
+
+* Place a root div, for the React widget to render inside, in the right spot in the client's layout: 
+
+```
+<div id="financing-cost-widget">Prototype will go here</div>
+```
+
+* Call the widget function every time the price changes passing the merchant name, elementID where the widget will render, price, currency and quantity, for example:
+
+```
+new FinancingCostWidget({
+    merchant: "Merchant Test",
+    elementId: "financing-cost-widget",
+    price: parseInt($("#product-price")[0].innerText.replace(/\D/g, "")),
+    currency: $("#product-price")[0].innerText.slice(-1),
+    quantity: parseInt($(".section > div > input").val()),
+  });
+  
+```
+
+## Testing
+
+* Did integration test that included the main component; FinancingCost.js including its children components and the api client utils.
+* Did NOT write tests for the Modal and FinancingDetails components due to lack of time.
+
 # Frontend coding challenge
+
 
 This is the coding challenge for people who applied to a frontend developer position at SeQura. It's been designed to be a simplified version of the same problems we deal with.
 
