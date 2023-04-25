@@ -5,5 +5,9 @@ import App from "./App";
 
 import "./index.scss";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+window.FinancingCostWidget = (config) => {
+  const { elementId, ...rest } = config;
+  const root = ReactDOM.createRoot(document.getElementById(elementId));
+  root.render(<App config={rest} />);
+  return this;
+};

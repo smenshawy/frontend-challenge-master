@@ -1,0 +1,26 @@
+.financing-details {
+  padding: 1rem;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
+
+  &__steps,
+  &__footer {
+    padding: 1rem;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

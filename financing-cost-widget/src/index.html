@@ -7,6 +7,18 @@
     <title>Financing Cost</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="overlays"></div>
+    <div id="financing-cost-widget"></div>
+
+    <script src="bundle.js"></script>
+    <script>
+        new FinancingCostWidget({
+          merchant: "Merchant Test",
+          elementId: "financing-cost-widget",
+          price: 5999,
+          currency: "$",
+          quantity: 1,
+        });
+    </script>
   </body>
 </html>

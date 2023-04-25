@@ -1,0 +1,27 @@
+.financing-cost {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 1rem;
+  width: 100%;
+  margin: 0.5rem 0;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  &__heading {
+    margin: 0;
+  }
+
+  &__action {
+    border: 0;
+    background-color: transparent;
+    color: rgb(0, 0, 255);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
