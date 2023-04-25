@@ -48,6 +48,13 @@ new FinancingCostWidget({
 * Did integration test that included the main component; FinancingCost.js including its children components and the api client utils.
 * Did NOT write tests for the Modal and FinancingDetails components due to lack of time.
 
+## Things I'd work on if I had more time:
+
+* Write unit tests to all my componets and utils.
+* Solve the flickering happening whenever the user changes product's price or quantity, re-rendering the widget.
+
+**Thank you for giving me such an opportunity, there were a couple of things in the test that I had not done before so the test was both enjoyable and challenging at some points too!!**
+
 # Frontend coding challenge
 
 
