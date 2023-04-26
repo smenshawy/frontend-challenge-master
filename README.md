@@ -17,6 +17,8 @@
 
 ## To distribute to clients
 
+### The way I did it:
+
 * Add 3 <script> tags in the HTML page before the enty point of the project, main.js in this case:
 ```
 <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
@@ -42,6 +44,10 @@ new FinancingCostWidget({
   });
   
 ```
+
+### Potentially:
+
+We can wrap it in different types of wrappers (React, Vue, Angular, and JQuery) so that it works out of the box as an installable library in different kind of projects supporting the most common web framekworks.
 
 ## Testing
 
